@@ -25,3 +25,10 @@ Perintah ini menampilkan statistik dari Network Address Translation (NAT) pada r
 
 ![sh ip nat statistics](https://github.com/zakiramadan/modul_switching/assets/126186033/4ad1d36f-5e85-47c7-8d05-5d765d5ddd11)
 
+5. Pengiriman Packet Data
+Untuk mengirimkan paket data dari sumber ke tujuan pada masing-masing PC yang terhubung dalam VLAN yang sama atau berbeda, prosesnya melibatkan beberapa langkah:
+
+Dalam VLAN yang Sama: Komunikasi terjadi secara langsung melalui switch, asalkan kedua PC terhubung ke port yang berada dalam VLAN yang sama. Switch hanya akan meneruskan paket pada VLAN tersebut.
+Antar VLAN: Membutuhkan router atau switch layer 3 untuk melakukan routing antar VLAN (InterVLAN routing). Paket dari sumber akan dikirim ke gateway (router atau switch L3), yang kemudian akan meneruskannya ke VLAN tujuan.
+Konfigurasi NAT: Jika tujuannya berada di luar jaringan lokal (misalnya, Internet), router akan melakukan NAT pada paket tersebut, mengganti alamat IP sumber internal dengan alamat IP publik router sebelum mengirimkannya ke jaringan eksternal.
+Untuk setiap skenario, perangkat di jaringan harus dikonfigurasi dengan benar, termasuk VLAN, routing, dan NAT, agar komunikasi data berjalan sesuai dengan harapan.
